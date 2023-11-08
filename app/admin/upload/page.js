@@ -67,7 +67,7 @@ export default function Upload() {
       return;
     }
     axios
-      .post("https://api.condomonk.ca/api/developers/", developerdata, {
+      .post("https://api.globalhomes.ca/api/developers/", developerdata, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
@@ -96,7 +96,7 @@ export default function Upload() {
 
   useEffect(() => {
     axios
-      .get("https://api.condomonk.ca/api/city/")
+      .get("https://api.globalhomes.ca/api/city/")
       .then((res) => {
         console.log(res.data.results);
         setCities(res.data.results);
@@ -110,7 +110,7 @@ export default function Upload() {
       });
 
     axios
-      .get("https://api.condomonk.ca/api/developers/")
+      .get("https://api.globalhomes.ca/api/developers/")
       .then((res) => {
         console.log(res.data.results);
         setDevelopers(res.data.results);
@@ -200,7 +200,7 @@ export default function Upload() {
     };
 
     axios
-      .post("https://api.condomonk.ca/api/preconstructions/", alldata, {
+      .post("https://api.globalhomes.ca/api/preconstructions/", alldata, {
         headers: {
           "Content-Type": "multipart/form-data",
         },

@@ -38,7 +38,7 @@ export const metadata = {
 };
 
 async function getCities() {
-  const res = await fetch("https://api.condomonk.ca/api/all-city", {
+  const res = await fetch("https://api.globalhomes.ca/api/all-city", {
     next: { revalidate: 10 },
   });
 

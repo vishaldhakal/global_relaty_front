@@ -4,7 +4,7 @@ import BottomContactForm from "@/components/BottomContactForm";
 import { notFound } from "next/navigation";
 async function getData(slug) {
   const res = await fetch(
-    "https://api.condomonk.ca/api/preconstructions-detail/" + slug,
+    "https://api.globalhomes.ca/api/preconstructions-detail/" + slug,
     {
       next: { revalidate: 10 },
     }
@@ -19,7 +19,7 @@ async function getData(slug) {
 
 async function getRelatedData(city) {
   const res = await fetch(
-    "https://api.condomonk.ca/api/related-precons/" + city,
+    "https://api.globalhomes.ca/api/related-precons/" + city,
     {
       next: { revalidate: 10 },
     }
@@ -60,7 +60,7 @@ export default async function Home({ params }) {
   const newImages = (images) => {
     let neImgs = images;
     neImgs.forEach((image) => {
-      image.image = "https://api.condomonk.ca" + image.image;
+      image.image = "https://api.globalhomes.ca" + image.image;
     });
     for (let i = images.length; i < 7; i++) {
       neImgs.push({
@@ -257,7 +257,7 @@ export default async function Home({ params }) {
                 ?
               </h2>
               <h2 className="fw-mine text-center px-md-4 fs-4">
-                Don't know where to start ? Contact Condomonk now!
+                Don't know where to start ? Contact Globalhomes now!
               </h2>
               <div className="row row-cols-1 row-cols-md-3 mt-5">
                 <div className="col-md-3"></div>
@@ -273,7 +273,7 @@ export default async function Home({ params }) {
           <div>
             <div className="d-flex flex-column">
               <h2 className="main-title">
-                Similar New Construction condos in {data.city.name} ( 2023 )
+                Similar New Construction homes in {data.city.name} ( 2023 )
               </h2>
             </div>
             <div className="py-2"></div>

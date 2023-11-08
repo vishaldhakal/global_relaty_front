@@ -14,14 +14,14 @@ const Footer = ({ cities }) => {
         <div className="row gy-4">
           <div className="col-lg-5 col-md-12 footer-about">
             <Link href="/" className="logo d-flex align-items-center">
-              <span>Condomonk</span>
+              <span>Globalhomes</span>
             </Link>
             <p></p>
             <p>
-              Condomonk, your premier destination for pre-construction condos in
-              Canada. Discover your dream home before it's even built. Explore
-              our curated listings and find the perfect pre-construction condo
-              for your future.
+              Globalhomes, your premier destination for pre-construction homes
+              in Canada. Discover your dream home before it's even built.
+              Explore our curated listings and find the perfect pre-construction
+              condo for your future.
             </p>
             <div className="social-links d-flex mt-4">
               <Link href="#" className="me-2">
@@ -40,13 +40,13 @@ const Footer = ({ cities }) => {
           </div>
 
           <div className="col-12 col-lg-4 col-6 footer-links">
-            <h4>New Construction Condos in Canada</h4>
+            <h4>New Construction Homes in Canada</h4>
             <ul>
               {cities &&
                 cities.map((city) => (
                   <li key={city.id}>
                     <Link href={`/${city.slug}`}>
-                      <span>New construction condos in {city.name}</span>
+                      <span>New construction homes in {city.name}</span>
                     </Link>
                   </li>
                 ))}
@@ -71,7 +71,7 @@ const Footer = ({ cities }) => {
       <div className="container copyright text-start text-md-center mt-4">
         <p>
           ©2023 <span>Copyright</span>{" "}
-          <strong className="px-1">Condomonk</strong>{" "}
+          <strong className="px-1">Globalhomes</strong>{" "}
           <span>All Rights Reserved</span>
         </p>
       </div>

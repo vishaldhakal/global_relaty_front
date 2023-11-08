@@ -48,7 +48,7 @@ export default function News() {
     }
 
     axios
-      .post("https://api.condomonk.ca/api/news/", newsdata, {
+      .post("https://api.globalhomes.ca/api/news/", newsdata, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
@@ -105,7 +105,7 @@ export default function News() {
 
     axios
       .put(
-        `https://api.condomonk.ca/api/news/${newsdata.id}/`,
+        `https://api.globalhomes.ca/api/news/${newsdata.id}/`,
         updatenewsdata,
         {
           headers: {
@@ -160,7 +160,7 @@ export default function News() {
 
   function deleteNews(id) {
     axios
-      .delete(`https://api.condomonk.ca/api/news/${id}/`)
+      .delete(`https://api.globalhomes.ca/api/news/${id}/`)
       .then((res) => {
         console.log(res);
         setRefetcch(!refetch);
@@ -172,7 +172,7 @@ export default function News() {
 
   useEffect(() => {
     axios
-      .get("https://api.condomonk.ca/api/news/")
+      .get("https://api.globalhomes.ca/api/news/")
       .then((res) => {
         console.log(res.data.results);
         setNews(res.data.results);
@@ -182,7 +182,7 @@ export default function News() {
       });
 
     axios
-      .get("https://api.condomonk.ca/api/city/")
+      .get("https://api.globalhomes.ca/api/city/")
       .then((res) => {
         console.log(res.data.results);
         setCities(res.data.results);
@@ -203,7 +203,7 @@ export default function News() {
   const handleEdit = (e, id) => {
     e.preventDefault();
     axios
-      .get(`https://api.condomonk.ca/api/news/${id}/`)
+      .get(`https://api.globalhomes.ca/api/news/${id}/`)
       .then((res) => {
         console.log(res.data);
         setModalNews(true);

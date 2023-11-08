@@ -4,7 +4,7 @@ import BottomContactForm from "@/components/BottomContactForm";
 
 async function getData() {
   const res = await fetch(
-    "https://api.condomonk.ca/api/preconstructions?page_size=16",
+    "https://api.globalhomes.ca/api/preconstructions?page_size=16",
     {
       next: { revalidate: 10 },
     }
@@ -24,11 +24,11 @@ export default async function Home(props) {
         <div className="container">
           <div className="d-flex flex-column justify-content-start align-items-start">
             <h1 className="main-title">
-              New Construction condos in Canada (2023)
+              New Construction homes in Canada (2023)
             </h1>
             <p className="text-mine">
-              1000+ New Preconstruction Condos for sale in Canada | Check out
-              plans, pricing, availability for pre construction condos in Canada
+              1000+ New Preconstruction Homes for sale in Canada | Check out
+              plans, pricing, availability for pre construction homes in Canada
             </p>
           </div>
           <div className="py-2"></div>
@@ -41,7 +41,7 @@ export default async function Home(props) {
           </div>
           <div className="py-5 my-2"></div>
           <h2 className="fw-mine text-center mb-5 accent-line">
-            Explore New Construction Condos in These Cities
+            Explore New Construction Homes in These Cities
           </h2>
           <div className="row">
             <div className="col-4 col-md-4 col-xl-4">
@@ -56,7 +56,7 @@ export default async function Home(props) {
                 <div className="overlay">
                   <div className="details">
                     <h4>Toronto</h4>
-                    <p>Explore Toronto's finest New construction condos</p>
+                    <p>Explore Toronto's finest New construction homes</p>
                   </div>
                 </div>
               </Link>
@@ -73,7 +73,7 @@ export default async function Home(props) {
                 <div className="overlay">
                   <div className="details">
                     <h4>Brampton</h4>
-                    <p>Brampton's finest New construction condos</p>
+                    <p>Brampton's finest New construction homes</p>
                   </div>
                 </div>
               </Link>
@@ -90,7 +90,7 @@ export default async function Home(props) {
                 <div className="overlay">
                   <div className="details">
                     <h4>Etobicoke</h4>
-                    <p>Etobicoke's finest New construction condos</p>
+                    <p>Etobicoke's finest New construction homes</p>
                   </div>
                 </div>
               </Link>
@@ -107,7 +107,7 @@ export default async function Home(props) {
                 <div className="overlay">
                   <div className="details">
                     <h4>Mississauga</h4>
-                    <p>Mississauga's finest New construction condos</p>
+                    <p>Mississauga's finest New construction homes</p>
                   </div>
                 </div>
               </Link>
@@ -128,7 +128,7 @@ export default async function Home(props) {
                 ?
               </h2>
               <h2 className="fw-mine text-center px-md-4 fs-4">
-                Don't know where to start ? Contact Condomonk now!
+                Don't know where to start ? Contact Globalhomes now!
               </h2>
               <div className="row row-cols-1 row-cols-md-3 mt-5">
                 <div className="col-md-3"></div>

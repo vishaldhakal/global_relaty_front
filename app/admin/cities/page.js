@@ -31,7 +31,7 @@ export default function Cities() {
     }
 
     axios
-      .post("https://api.condomonk.ca/api/city/", citydata)
+      .post("https://api.globalhomes.ca/api/city/", citydata)
       .then((res) => {
         setRefetcch(!refetch);
         setCityData(stat);
@@ -56,7 +56,10 @@ export default function Cities() {
 
     let updatecitydata = citydata;
     axios
-      .put(`https://api.condomonk.ca/api/city/${citydata.id}/`, updatecitydata)
+      .put(
+        `https://api.globalhomes.ca/api/city/${citydata.id}/`,
+        updatecitydata
+      )
       .then((res) => {
         setModalCity(false);
         setIsEdit(false);
@@ -106,7 +109,7 @@ export default function Cities() {
 
   function deleteEvent(id) {
     axios
-      .delete(`https://api.condomonk.ca/api/city/${id}/`)
+      .delete(`https://api.globalhomes.ca/api/city/${id}/`)
       .then((res) => {
         console.log(res);
         setRefetcch(!refetch);
@@ -117,7 +120,7 @@ export default function Cities() {
   }
   useEffect(() => {
     axios
-      .get("https://api.condomonk.ca/api/city/")
+      .get("https://api.globalhomes.ca/api/city/")
       .then((res) => {
         console.log(res.data.results);
         setCities(res.data.results);
@@ -138,7 +141,7 @@ export default function Cities() {
   const handleEdit = (e, id) => {
     e.preventDefault();
     axios
-      .get(`https://api.condomonk.ca/api/city/${id}/`)
+      .get(`https://api.globalhomes.ca/api/city/${id}/`)
       .then((res) => {
         console.log(res.data);
         setModalCity(true);

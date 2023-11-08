@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 
 async function getData(city) {
   const res = await fetch(
-    "https://api.condomonk.ca/api/preconstructions-city/" + city,
+    "https://api.globalhomes.ca/api/preconstructions-city/" + city,
     {
       next: { revalidate: 10 },
     }
@@ -29,12 +29,12 @@ export async function generateMetadata({ params }, parent) {
     alternates: {
       canonical: `https://condomonk.ca/${params.city}`,
     },
-    title: data.preconstructions.length + " Preconstruction Condos in " + city,
-    description: "Preconstruction Condos in " + city,
+    title: data.preconstructions.length + " Preconstruction Homes in " + city,
+    description: "Preconstruction Homes in " + city,
     description:
-      "Search our selection of pre construction condos for sale in " +
+      "Search our selection of pre construction homes for sale in " +
       city +
-      ". Our ever-changing portfolio of pre constructions brings you closer to your ideal condos in the growing city of " +
+      ". Our ever-changing portfolio of pre constructions brings you closer to your ideal homes in the growing city of " +
       city,
   };
 }
@@ -48,12 +48,12 @@ export default async function Home({ params }) {
         <div className="container">
           <div className="d-flex flex-column">
             <h1 className="main-title">
-              New Construction condos in {CapitalizeFirst(params.city)} ( 2023 )
+              New Construction homes in {CapitalizeFirst(params.city)} ( 2023 )
             </h1>
             <p className="text-mine">
-              {data.preconstructions.length} New Preconstruction Condos for sale
+              {data.preconstructions.length} New Preconstruction Homes for sale
               in {CapitalizeFirst(params.city)}, Ontario | Check out plans,
-              pricing, availability for pre construction condos in{" "}
+              pricing, availability for pre construction homes in{" "}
               {CapitalizeFirst(params.city)}
             </p>
           </div>
@@ -82,7 +82,7 @@ export default async function Home({ params }) {
                 ?
               </h2>
               <h2 className="fw-mine text-center px-md-4 fs-4">
-                Don't know where to start ? Contact Condomonk now!
+                Don't know where to start ? Contact Globalhomes now!
               </h2>
               <div className="row row-cols-1 row-cols-md-3 mt-5">
                 <div className="col-md-3"></div>

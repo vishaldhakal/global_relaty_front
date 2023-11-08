@@ -12,7 +12,7 @@ const Navbar = ({ cities }) => {
     <nav className="navbar navbar-expand-sm navbar-light bg-white shadow-lg py-3">
       <div className="container">
         <Link href="/" className="logo d-flex align-items-center">
-          <span>Condomonk</span>
+          <span>Globalhomes</span>
         </Link>
         <button
           className="navbar-toggler d-lg-none"
@@ -36,7 +36,7 @@ const Navbar = ({ cities }) => {
                 aria-haspopup="true"
                 aria-expanded="false"
               >
-                Condos For Sale
+                Homes For Sale
               </a>
               <div className="dropdown-menu" aria-labelledby="dropdownId">
                 {cities &&

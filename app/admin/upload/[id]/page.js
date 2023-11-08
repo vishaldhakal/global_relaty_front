@@ -67,7 +67,7 @@ export default function Update({ params }) {
       return;
     }
     axios
-      .post("https://api.condomonk.ca/api/developers/", developerdata, {
+      .post("https://api.globalhomes.ca/api/developers/", developerdata, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
@@ -108,7 +108,7 @@ export default function Update({ params }) {
 
   useEffect(() => {
     axios
-      .get("https://api.condomonk.ca/api/city/")
+      .get("https://api.globalhomes.ca/api/city/")
       .then((res) => {
         console.log(res.data.results);
         setCities(res.data.results);
@@ -122,7 +122,7 @@ export default function Update({ params }) {
       });
 
     axios
-      .get("https://api.condomonk.ca/api/developers/")
+      .get("https://api.globalhomes.ca/api/developers/")
       .then((res) => {
         console.log(res.data.results);
         setDevelopers(res.data.results);
@@ -132,7 +132,7 @@ export default function Update({ params }) {
       });
 
     axios
-      .get("https://api.condomonk.ca/api/preconstructions/" + params.id + "/")
+      .get("https://api.globalhomes.ca/api/preconstructions/" + params.id + "/")
       .then((res) => {
         setPredata(res.data);
       })
@@ -204,7 +204,7 @@ export default function Update({ params }) {
 
     axios
       .put(
-        `https://api.condomonk.ca/api/preconstructions/${predata.id}/`,
+        `https://api.globalhomes.ca/api/preconstructions/${predata.id}/`,
         alldata,
         {
           headers: {
@@ -245,7 +245,7 @@ export default function Update({ params }) {
     }).then((willDelete) => {
       if (willDelete) {
         axios
-          .delete(`https://api.condomonk.ca/api/delete-image/${image.id}/`)
+          .delete(`https://api.globalhomes.ca/api/delete-image/${image.id}/`)
           .then((res) => {
             console.log(res.data);
             setRefetch(!refetch);
@@ -277,7 +277,7 @@ export default function Update({ params }) {
     }).then((willDelete) => {
       if (willDelete) {
         axios
-          .delete(`https://api.condomonk.ca/api/delete-floorplan/${plan.id}/`)
+          .delete(`https://api.globalhomes.ca/api/delete-floorplan/${plan.id}/`)
           .then((res) => {
             console.log(res.data);
             setRefetch(!refetch);
