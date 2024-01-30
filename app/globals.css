@@ -90,8 +90,18 @@ a:hover {
 .dropdown-menu .dropdown-item:hover {
   background-color: #f6f9ff;
 }
+.agent-img {
+  width: 100% !important;
+  max-height: 80px !important;
+  border-radius: 10%;
+  object-fit: cover;
+  object-position: top;
+}
 
 @media (min-width: 768px) {
+  .agent-img {
+    max-height: 68px !important;
+  }
   .dropdown-menu-arrow::before {
     content: "";
     width: 13px;
@@ -1067,4 +1077,14 @@ label {
 
 .btn-call:hover {
   background-image: linear-gradient(106deg, #012970, #005eff);
+}
+.side-contact-img {
+  width: 60%;
+}
+
+.side-fix-contact {
+  position: sticky;
+  top: 5.5rem;
+  right: 0;
+  z-index: 99 !important;
 }

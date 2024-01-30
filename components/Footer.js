@@ -62,7 +62,7 @@ const Footer = ({ cities }) => {
               <strong>Phone:</strong> <span>647 527 4970</span>
             </p>
             <p>
-              <strong>Email:</strong> <span>info@condomonk.ca</span>
+              <strong>Email:</strong> <span>hello@globalhomes.ca</span>
             </p>
           </div>
         </div>

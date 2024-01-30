@@ -1,6 +1,8 @@
 import Nformatter from "@/components/Nformatter";
 import CondoCard from "@/components/CondoCard";
 import BottomContactForm from "@/components/BottomContactForm";
+import SideContactForm from "@/components/SideContactForm";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 async function getData(slug) {
   const res = await fetch(
@@ -236,8 +238,42 @@ export default async function Home({ params }) {
               </div>
               <div className="col col-md-4 ps-md-2 pt-5 pt-md-0">
                 <div className="py-4 py-md-0"></div>
-                <div className="myps3 mt-mine pe-0" id="mycontact">
-                  <div className="text-center"></div>
+                <div className="side-fix-contact mt-mine pe-0">
+                  <div className="m-1 p-4 py-3 shadow-lg rounded-mine bordt">
+                    <div className="row row-cols-2 align-items-start">
+                      <div className="col-4">
+                        <img
+                          src="/aaa.webp"
+                          alt="contact image"
+                          className="agent-img"
+                        />
+                      </div>
+                      <div className="col-8">
+                        <h5 className="fw-bold text-center linem fs-4  mb-0">
+                          Send a Message
+                        </h5>
+                        <p className="mb-0 text-center">
+                          <Link
+                            href="telto:647 527 4970"
+                            className="link-black"
+                          >
+                            <i className="bi bi-telephone"></i> 647 527 4970
+                          </Link>
+                        </p>
+                        <p className="mb-0 text-center">hello@globalhomes.ca</p>
+                      </div>
+                    </div>
+                    <div className="my-4"></div>
+                    <SideContactForm
+                      proj_name={data.project_name}
+                      city={data.city.name}
+                      defaultmessage={
+                        "Please send me additional information about " +
+                        data.project_name +
+                        ".  Thank you"
+                      }
+                    ></SideContactForm>
+                  </div>
                 </div>
               </div>
             </div>
@@ -253,11 +289,7 @@ export default async function Home({ params }) {
                 />
               </div>
               <h2 className="fw-bolder fw-boldie text-center px-md-4 fs-3">
-                Are you looking to buy a preconstruction home for the first time
-                ?
-              </h2>
-              <h2 className="fw-mine text-center px-md-4 fs-4">
-                Don't know where to start ? Contact Globalhomes now!
+                Contact Globalhomes now!
               </h2>
               <div className="row row-cols-1 row-cols-md-3 mt-5">
                 <div className="col-md-3"></div>
