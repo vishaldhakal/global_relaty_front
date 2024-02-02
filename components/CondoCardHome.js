@@ -25,8 +25,8 @@ export default function CondoCardHome(props) {
 
   return (
     <>
-      <div className="card border-0 shadow-sm rounded-mine my-3 my-md-0">
-        <div className="position-relative is-loading">
+      <div className="card border-0 shadow-lg rounded-mine my-3 my-md-0">
+        <div className="position-relative rounded-mine is-loading">
           <Link
             href={`/${props.city.slug}/${props.slug}`}
             className="mylinkk"

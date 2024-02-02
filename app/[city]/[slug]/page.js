@@ -3,6 +3,7 @@ import CondoCard from "@/components/CondoCard";
 import BottomContactForm from "@/components/BottomContactForm";
 import SideContactForm from "@/components/SideContactForm";
 import Link from "next/link";
+import Breadcrumb from "@/components/Breadcrumb";
 import { notFound } from "next/navigation";
 async function getData(slug) {
   const res = await fetch(
@@ -105,6 +106,28 @@ export default async function Home({ params }) {
     <>
       <div className="pt-1">
         <div className="container">
+          <Breadcrumb
+            homeElement={"Home"}
+            separator={
+              <span>
+                {" "}
+                <svg
+                  className="svg minearr"
+                  viewBox="0 0 32 32"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M17.65 16.513l-7.147-7.055 1.868-1.893 9.068 8.951-9.069 8.927-1.866-1.896z"
+                    fill={"#869099"}
+                  ></path>
+                </svg>{" "}
+              </span>
+            }
+            activeClasses="text-dark"
+            containerClasses="d-flex align-items-center p-0 m-0 pt-4 breadcrumb"
+            listClasses="mx-1"
+            capitalizeLinks
+          />
           <div className="my-3 grid-cont">
             {newImages(data.image)
               ?.slice(0, 7)
@@ -132,7 +155,9 @@ export default async function Home({ params }) {
                 <div className="screenshot">
                   <div className="row row-cols-1 row-cols-sm-2">
                     <div className="col-sm-12">
-                      <h1 className="side fw-bold">{data.project_name}</h1>
+                      <h1 className="side fw-bold text-mine2">
+                        {data.project_name}
+                      </h1>
                       <p className="mb-0">
                         By <strong>{data.developer.name}</strong>
                       </p>
@@ -141,6 +166,7 @@ export default async function Home({ params }) {
                         {checkPricing(data.price_starting_from, data.price_to)}
                       </h2>
                       <div className="mb-1 fw-bold">
+                        <span scope="col">Project Status : </span>
                         <span scope="col">{data.status}</span>
                       </div>
                     </div>
@@ -185,13 +211,6 @@ export default async function Home({ params }) {
                         </div>
                       </div>
                     </div>
-                    <p>
-                      <i>
-                        {data.project_name} is a pre construction project
-                        developed by {data.developer.name} in the city of{" "}
-                        {data.city.name}. The project status is {data.status} .
-                      </i>
-                    </p>
                     <div className="py-5 pt-3">
                       <h2 className="fw-bold fs-3">
                         Information about {data.project_name} in{" "}
@@ -253,14 +272,8 @@ export default async function Home({ params }) {
                           Send a Message
                         </h5>
                         <p className="mb-0 text-center">
-                          <Link
-                            href="telto:647 527 4970"
-                            className="link-black"
-                          >
-                            <i className="bi bi-telephone"></i> 647 527 4970
-                          </Link>
+                          Talk to an expert agent
                         </p>
-                        <p className="mb-0 text-center">hello@globalhomes.ca</p>
                       </div>
                     </div>
                     <div className="my-4"></div>

@@ -20,18 +20,20 @@ export default async function Home(props) {
   const data = await getData();
   return (
     <>
-      <div className="pt-5">
-        <div className="container">
-          <div className="d-flex flex-column justify-content-start align-items-start">
+      <img src="/bannertop.png" alt="dce" className="img-fluid" />
+      <div className="pt-5 mt-5">
+        <div className="container pt-md-5">
+          <div className="d-flex flex-column justify-content-center align-items-center">
             <h1 className="main-title">
-              New Construction homes in Canada (2023)
+              New Construction Homes in Canada (2023)
             </h1>
             <p className="text-mine">
               1000+ New Preconstruction Homes for sale in Canada | Check out
-              plans, pricing, availability for pre construction homes in Canada
+              plans, pricing, availability for pre construction homes through
+              Globalhomes
             </p>
           </div>
-          <div className="py-2"></div>
+          <div className="py-4"></div>
           <div className="row row-cols-1 row-cols-md-4 gy-4">
             {data.results.map((item) => (
               <div className="col" key={item.id}>

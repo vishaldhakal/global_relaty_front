@@ -14,7 +14,11 @@ const Footer = ({ cities }) => {
         <div className="row gy-4">
           <div className="col-lg-5 col-md-12 footer-about">
             <Link href="/" className="logo d-flex align-items-center">
-              <span>Globalhomes</span>
+              <img
+                src="/logo.png"
+                alt="global homes logo"
+                className="img-fluid"
+              />
             </Link>
             <p></p>
             <p>
@@ -56,8 +60,7 @@ const Footer = ({ cities }) => {
           <div className="col-lg-3 col-md-12 footer-contact text-start text-md-start">
             <h4>Contact Us</h4>
             <p>4 Robert speck parkway,</p>
-            <p>, Mississauga, ONTARIO</p>
-            <p>Canada</p>
+            <p>Mississauga, ONTARIO, Canada</p>
             <p className="mt-4">
               <strong>Phone:</strong> <span>647 527 4970</span>
             </p>

@@ -3,7 +3,7 @@
 }
 
 body {
-  background: #f6f9ff;
+  /* background: #f6f9ff; */
   color: #000000;
 }
 
@@ -198,6 +198,8 @@ a:hover {
 
 .card-body {
   padding: 0 20px 20px 20px;
+  border-bottom-left-radius: 10px !important;
+  border-bottom-right-radius: 10px !important;
 }
 
 .card-img-overlay {
@@ -279,23 +281,23 @@ a:hover {
   font-weight: 600;
 }
 
-/* Bordered Tabs */
-.nav-tabs-bordered {
+/* Borde#004AAD Tabs */
+.nav-tabs-borde#004AAD {
   border-bottom: 2px solid #ebeef4;
 }
 
-.nav-tabs-bordered .nav-link {
+.nav-tabs-borde#004AAD .nav-link {
   margin-bottom: -2px;
   border: none;
   color: #2c384e;
 }
 
-.nav-tabs-bordered .nav-link:hover,
-.nav-tabs-bordered .nav-link:focus {
+.nav-tabs-borde#004AAD .nav-link:hover,
+.nav-tabs-borde#004AAD .nav-link:focus {
   color: #4154f1;
 }
 
-.nav-tabs-bordered .nav-link.active {
+.nav-tabs-borde#004AAD .nav-link.active {
   background-color: #fff;
   color: #4154f1;
   border-bottom: 2px solid #4154f1;
@@ -315,7 +317,7 @@ a:hover {
 }
 
 .logo img {
-  max-height: 26px;
+  max-height: 46px;
   margin-right: 6px;
 }
 
@@ -325,12 +327,12 @@ a:hover {
   color: #012970;
 }
 .btn-danger{
-  background-color: red !important;
-  border-color:red !important ;
+  background-color: #004AAD !important;
+  border-color:#004AAD !important ;
 }
 .btn-danger:hover, .btn-danger:focus, .btn-danger:active {
-  background-color: red !important;
-  border-color:red !important ;
+  background-color: #004AAD !important;
+  border-color:#004AAD !important ;
 }
 .header {
   transition: all 0.5s;
@@ -805,15 +807,19 @@ label {
   font-weight: 800;
   margin-bottom: 10px;
 }
-.main-title:before {
-  background-color: red;
+/* .main-title:before {
+  background-color: #004AAD;
   width: 10px;
   height: 33px;
   margin-right: 0.2em;
   content: "";
-}
+} */
 .text-mine{
   color: rgb(0, 0, 0);
+  font-weight: 500;
+}
+.text-mine2{
+  color: #6D8E3C;
   font-weight: 500;
 }
 
@@ -822,6 +828,8 @@ label {
   max-height: 18rem;
   height: 250px !important;
   object-fit: cover;
+  border-top-left-radius: 10px !important;
+  border-top-right-radius: 10px !important;
 }
 
 .cardd-title{
@@ -832,7 +840,7 @@ label {
 .cardd-subtitle{
   font-size: 1rem;
   font-weight: 600;
-  color: red;
+  color: #004AAD;
 }
 
 .card-address{
@@ -842,8 +850,8 @@ label {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: red;
-  border-bottom-right-radius: 10px;
+  background-color: #6D8E3C;
+  border-top-left-radius: 10px;
   color: white;
   font-size: 0.85rem;
 }
@@ -981,7 +989,7 @@ label {
   justify-content: center;
 }
 .accent-line:before {
-  background-color: red;
+  background-color: #004AAD;
   height: 2px;
   width: 2em;
   margin-right: 0.75em;
@@ -990,7 +998,7 @@ label {
 .accent-line:after {
   width: 2em;
   height: 2px;
-  background-color: red;
+  background-color: #004AAD;
   margin-left: 0.75em;
   content: "";
 }
@@ -1045,6 +1053,7 @@ label {
   /*ff6200*/
 }
 
+
 .rounded-minetop {
   border-radius: 0 !important;
   border-top-left-radius: 3px !important;
@@ -1087,4 +1096,19 @@ label {
   top: 5.5rem;
   right: 0;
   z-index: 99 !important;
+}
+.rounded-mine {
+  border-radius: 10px !important;
+}
+.minearr {
+  width: 18px;
+  height: 18px;
+}
+.breadcrumb {
+  list-style: none !important;
+}
+
+.breadcrumb li a {
+  color: black !important;
+  font-weight: 500;
 }

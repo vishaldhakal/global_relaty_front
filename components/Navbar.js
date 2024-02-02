@@ -9,10 +9,10 @@ const Navbar = ({ cities }) => {
     return <></>;
   }
   return (
-    <nav className="navbar navbar-expand-sm navbar-light bg-white shadow-lg py-3">
+    <nav className="navbar navbar-expand-sm navbar-dark bg-white shadow-lg py-3">
       <div className="container">
         <Link href="/" className="logo d-flex align-items-center">
-          <span>Globalhomes</span>
+          <img src="/logo.png" alt="global homes logo" className="img-fluid" />
         </Link>
         <button
           className="navbar-toggler d-lg-none"
@@ -29,7 +29,7 @@ const Navbar = ({ cities }) => {
           <ul className="navbar-nav ms-auto mt-2 mt-lg-0">
             <li className="nav-item dropdown">
               <a
-                className="nav-link dropdown-toggle active fw-bold"
+                className="nav-link dropdown-toggle active"
                 href="#"
                 id="dropdownId"
                 data-bs-toggle="dropdown"

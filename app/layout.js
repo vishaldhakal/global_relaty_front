@@ -4,9 +4,9 @@ import "./icons.css";
 import "react-quill/dist/quill.snow.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Montserrat } from "next/font/google";
+import { Jost } from "next/font/google";
 
-const montserrat = Montserrat({ subsets: ["cyrillic"] });
+const montserrat = Jost({ subsets: ["latin"] });
 
 export const metadata = {
   alternates: {
