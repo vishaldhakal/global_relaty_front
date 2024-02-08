@@ -9,7 +9,7 @@ const Navbar = ({ cities }) => {
     return <></>;
   }
   return (
-    <nav className="navbar navbar-expand-sm navbar-dark bg-white shadow-lg py-3">
+    <nav className="navbar navbar-expand-sm navbar-dark bg-white shadow-lg py-3 sticky-top">
       <div className="container">
         <Link href="/" className="logo d-flex align-items-center">
           <img src="/logo.png" alt="global homes logo" className="img-fluid" />
@@ -36,7 +36,7 @@ const Navbar = ({ cities }) => {
                 aria-haspopup="true"
                 aria-expanded="false"
               >
-                Homes For Sale
+                New Construction Homes
               </a>
               <div className="dropdown-menu" aria-labelledby="dropdownId">
                 {cities &&
@@ -58,12 +58,7 @@ const Navbar = ({ cities }) => {
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#">
-                News
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                Events
+                Dubai and India Projects
               </a>
             </li>
             <li className="nav-item">

@@ -59,10 +59,11 @@ const Footer = ({ cities }) => {
 
           <div className="col-lg-3 col-md-12 footer-contact text-start text-md-start">
             <h4>Contact Us</h4>
-            <p>4 Robert speck parkway,</p>
-            <p>Mississauga, ONTARIO, Canada</p>
+            <p>SaveMax Global Realty</p>
+            <p>5 Montpelier St. Suite 202-203</p>
+            <p>Brampton, ON L6Y 6H4</p>
             <p className="mt-4">
-              <strong>Phone:</strong> <span>647 527 4970</span>
+              <strong>Phone:</strong> <span>289-271-1056</span>
             </p>
             <p>
               <strong>Email:</strong> <span>hello@globalhomes.ca</span>

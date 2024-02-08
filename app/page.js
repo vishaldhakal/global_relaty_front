@@ -42,6 +42,8 @@ export default async function Home(props) {
             ))}
           </div>
           <div className="py-5 my-2"></div>
+          <img src="/dubaiandindia.png" alt="dce" className="img-fluid" />
+          <div className="py-5 my-2"></div>
           <h2 className="fw-mine text-center mb-5 accent-line">
             Explore New Construction Homes in These Cities
           </h2>
