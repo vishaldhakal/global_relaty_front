@@ -60,6 +60,9 @@ const Footer = ({ cities }) => {
           <div className="col-lg-3 col-md-12 footer-contact text-start text-md-start">
             <h4>Contact Us</h4>
             <p className="mt-4">
+              <strong>SaveMax Global Realty </strong>
+            </p>
+            <p className="mt-4">
               <strong>Phone:</strong> <span>289-271-1056</span>
             </p>
             <p>
