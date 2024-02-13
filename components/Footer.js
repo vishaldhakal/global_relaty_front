@@ -59,9 +59,6 @@ const Footer = ({ cities }) => {
 
           <div className="col-lg-3 col-md-12 footer-contact text-start text-md-start">
             <h4>Contact Us</h4>
-            <p>SaveMax Global Realty</p>
-            <p>5 Montpelier St. Suite 202-203</p>
-            <p>Brampton, ON L6Y 6H4</p>
             <p className="mt-4">
               <strong>Phone:</strong> <span>289-271-1056</span>
             </p>
@@ -74,7 +71,7 @@ const Footer = ({ cities }) => {
 
       <div className="container copyright text-start text-md-center mt-4">
         <p>
-          ©2023 <span>Copyright</span>{" "}
+          ©2024 <span>Copyright</span>{" "}
           <strong className="px-1">Globalhomes</strong>{" "}
           <span>All Rights Reserved</span>
         </p>
