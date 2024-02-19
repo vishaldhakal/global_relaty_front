@@ -62,9 +62,9 @@ const Navbar = ({ cities }) => {
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <Link className="nav-link" href="/contact-us">
                 Contact
-              </a>
+              </Link>
             </li>
           </ul>
           <button
