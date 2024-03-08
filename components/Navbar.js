@@ -67,12 +67,12 @@ const Navbar = ({ cities }) => {
               </Link>
             </li>
           </ul>
-          <button
+          <Link
+            href="tel:(905) 457-4588"
             className="btn btn-danger my-2 my-sm-0 rounded-pill ms-md-3"
-            type="submit"
           >
             Call Now
-          </button>
+          </Link>
         </div>
       </div>
     </nav>

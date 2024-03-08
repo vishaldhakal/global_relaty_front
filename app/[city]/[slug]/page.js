@@ -295,11 +295,9 @@ export default async function Home({ params }) {
           <div className="py-5 my-5" id="mycontact">
             <div className="container">
               <div className="row justify-content-center">
-                <img
-                  src="/contact-bottom-2.png"
-                  alt="dce"
-                  className="img-fluid w-25 w-smm-50 mb-3"
-                />
+                <h3 class="fw-bolder fw-boldie text-center fs-1">
+                  VIP PLATIUM ACCESS
+                </h3>
               </div>
               <h2 className="fw-bolder fw-boldie text-center px-md-4 fs-3">
                 Contact Globalhomes now!

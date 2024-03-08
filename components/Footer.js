@@ -62,11 +62,11 @@ const Footer = ({ cities }) => {
             <p className="mt-4">
               <strong>SaveMax Global Realty </strong>
             </p>
-            <p className="mt-4">
-              <strong>Phone:</strong> <span>289-271-1056</span>
-            </p>
-            <p>
-              <strong>Email:</strong> <span>hello@globalhomes.ca</span>
+            <a className="mt-4 text-dark" href="tel:(905) 457-4588">
+              <strong>Phone:</strong> <span> (905) 457-4588</span>
+            </a>
+            <p className="mt-2">
+              <strong>Email:</strong> <span>info@globalhomes.ca</span>
             </p>
           </div>
         </div>

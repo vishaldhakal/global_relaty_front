@@ -7,11 +7,9 @@ export default async function Home(props) {
         <div id="mycontact">
           <div className="container">
             <div className="row justify-content-center">
-              <img
-                src="/contact-bottom-2.png"
-                alt="dce"
-                className="img-fluid w-25 w-smm-50 mb-3"
-              />
+              <h1 class="fw-bolder fw-boldie text-center">
+                VIP PLATIUM ACCESS
+              </h1>
             </div>
             <h2 className="fw-bolder fw-boldie text-center px-md-4 fs-3">
               Contact Globalhomes now!
