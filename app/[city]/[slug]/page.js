@@ -305,7 +305,10 @@ export default async function Home({ params }) {
               <div className="row row-cols-1 row-cols-md-3 mt-5">
                 <div className="col-md-3"></div>
                 <div className="col-md-6">
-                  <BottomContactForm></BottomContactForm>
+                  <BottomContactForm
+                    proj_name={data.project_name}
+                    city={data.city.name}
+                  ></BottomContactForm>
                 </div>
                 <div className="col-md-3"></div>
               </div>

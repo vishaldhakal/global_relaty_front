@@ -10,6 +10,8 @@ export default function BottomContactForm(props) {
     email: "",
     realtor: "No",
     message: props.defaultmessage,
+    proj_name: props.proj_name,
+    city: props.city,
   });
   const handleChange = (e) => {
     const { id, value } = e.target;

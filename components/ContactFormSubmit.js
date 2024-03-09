@@ -2,7 +2,7 @@ import axios from "axios";
 import swal from "sweetalert";
 
 function ContactFormSubmit(msgdata, setSubmitbtn, setCredentials) {
-  let baseUrl = "https://api.homebaba.ca";
+  let baseUrl = "https://api.globalhomes.ca";
   setSubmitbtn("Submitting...");
   let form_data = new FormData();
   form_data.append("name", msgdata.name);
@@ -10,7 +10,9 @@ function ContactFormSubmit(msgdata, setSubmitbtn, setCredentials) {
   form_data.append("phone", msgdata.phone);
   form_data.append("message", msgdata.message);
   form_data.append("realtor", msgdata.realtor);
-  let url = `${baseUrl}/api/contact-form-submit/`;
+  form_data.append("cityy", msgdata.city);
+  form_data.append("proj_name", msgdata.proj_name);
+  let url = `${baseUrl}/api/contact-form-submission/`;
   axios
     .post(url, form_data, {
       headers: {
