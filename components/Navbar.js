@@ -68,7 +68,7 @@ const Navbar = ({ cities }) => {
             </li>
           </ul>
           <Link
-            href="tel:(905) 457-4588"
+            href="tel:(905) 872 5680"
             className="btn btn-danger my-2 my-sm-0 rounded-pill ms-md-3"
           >
             Call Now
