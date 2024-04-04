@@ -75,7 +75,7 @@ const Footer = ({ cities }) => {
       <div className="container copyright text-start text-md-center mt-4">
         <p>
           ©2024 <span>Copyright</span>{" "}
-          <strong className="px-1">Globalhomes</strong>{" "}
+          <strong className="px-1">Globalhomes.ca</strong>{" "}
           <span>All Rights Reserved</span>
         </p>
       </div>
