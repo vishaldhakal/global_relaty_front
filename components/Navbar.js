@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import ProjectSearch from "./ProjectSearch";
 
 const Navbar = ({ cities }) => {
   const pathname = usePathname();
@@ -10,12 +11,15 @@ const Navbar = ({ cities }) => {
   }
   return (
     <nav className="navbar navbar-expand-sm navbar-dark bg-white shadow-lg py-3 sticky-top">
-      <div className="container">
+      <div className="container justify-content-between justify-content-md-start">
         <Link href="/" className="logo d-flex align-items-center">
           <img src="/logo.png" alt="global homes logo" className="img-fluid" />
         </Link>
+        <div className="me-2 ms-md-3 me-md-0">
+          <ProjectSearch />
+        </div>
         <button
-          className="navbar-toggler d-lg-none"
+          className="navbar-toggler text-dark d-lg-none"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#collapsibleNavId"
@@ -23,11 +27,23 @@ const Navbar = ({ cities }) => {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span className="navbar-toggler-icon"></span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-list"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
+            />
+          </svg>
         </button>
         <div className="collapse navbar-collapse" id="collapsibleNavId">
           <ul className="navbar-nav ms-auto mt-2 mt-lg-0">
-            <li className="nav-item dropdown">
+            {/* <li className="nav-item dropdown">
               <a
                 className="nav-link dropdown-toggle active"
                 href="#"
@@ -50,7 +66,7 @@ const Navbar = ({ cities }) => {
                     </Link>
                   ))}
               </div>
-            </li>
+            </li> */}
             <li className="nav-item">
               <a className="nav-link" href="#">
                 About

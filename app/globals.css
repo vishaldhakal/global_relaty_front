@@ -310,11 +310,11 @@ a:hover {
   line-height: 1;
 }
 
-@media (min-width: 1200px) {
+/* @media (min-width: 1200px) {
   .logo {
     width: 280px;
   }
-}
+} */
 
 .logo img {
   max-height: 46px;
@@ -1111,4 +1111,23 @@ label {
 .breadcrumb li a {
   color: black !important;
   font-weight: 500;
+}
+.small-text2 {
+  font-size: 10px;
+  line-height: 1.5;
+  color: rgb(0, 0, 0);
+}
+.w-mine5{
+  width: 260px;
+}
+.autocomplete-results{
+  min-width: 260px;
+}
+.fs-vvsmall{
+  font-size: 0.6rem !important;
+}
+@media (max-width: 800px) {
+  .w-mine5 {
+    width: 180px;
+} 
 }
