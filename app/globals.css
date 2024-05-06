@@ -1131,3 +1131,57 @@ label {
     width: 180px;
 } 
 }
+.bg-mine {
+  background-color: rgb(245, 246, 247);
+}
+.glass {
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(5px);
+}
+
+.btn-scroll {
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(5px);
+  border: none !important;
+  color: #000000
+    /*ff6200*/
+    !important;
+  transition: background-color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
+  box-shadow: none !important;
+}
+.main-cont::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.main-cont {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+  scroll-behavior: smooth;
+}
+.car-item {
+  font-weight: 500;
+  color: #000000;
+  font-size: 1rem;
+  background-color: white !important;
+  border-bottom: 4px solid white;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.car-item-active {
+  border-bottom: 4px solid #000000;
+  background-color: #ffffff !important;
+  box-shadow: 0 0.2rem 0.3rem rgb(130 133 133 / 10%) !important;
+  color: rgb(0, 0, 0);
+}
+
+.car-item:hover {
+  border-bottom: 4px solid #000000;
+  background-color: #fdffff !important;
+  box-shadow: 0 0.2rem 0.3rem rgb(130 133 133 / 18%) !important;
+  color: black;
+}

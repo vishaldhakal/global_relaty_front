@@ -5,6 +5,7 @@ import "react-quill/dist/quill.snow.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Jost } from "next/font/google";
+import TopScroll from "@/components/TopScroll";
 
 const montserrat = Jost({ subsets: ["latin"] });
 
@@ -54,6 +55,7 @@ export default async function RootLayout({ children }) {
     <html lang="en">
       <body className={montserrat.className}>
         <Navbar cities={cities}></Navbar>
+        <TopScroll cities={cities}></TopScroll>
         {children}
         <Footer cities={cities}></Footer>
         <script
