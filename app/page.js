@@ -1,6 +1,7 @@
 import CondoCardHome from "@/components/CondoCardHome";
 import Link from "next/link";
 import BottomContactForm from "@/components/BottomContactForm";
+import TopScroll from "@/components/TopScroll";
 
 async function getData() {
   const res = await fetch(
@@ -16,22 +17,35 @@ async function getData() {
   return res.json();
 }
 
+async function getCities() {
+  const res = await fetch("https://api.globalhomes.ca/api/all-city", {
+    next: { revalidate: 10 },
+  });
+
+  if (!res.ok) {
+    throw new Error("Failed to fetch data");
+  }
+  return res.json();
+}
+
 export default async function Home(props) {
   const data = await getData();
+  const cities = await getCities();
   return (
     <>
       <img src="/bannertop.png" alt="dce" className="img-fluid" />
+      <TopScroll cities={cities}></TopScroll>
       <div className="pt-5 mt-5">
         <div className="container pt-md-5">
           <div className="d-flex flex-column justify-content-center align-items-center">
             <h1 className="main-title">
-              New Construction Homes in Canada (2023)
+              Pre Construction Homes in Canada (2024)
             </h1>
-            <p className="text-mine">
+            <h2 className="text-mine fs-small text-center ">
               1000+ New Preconstruction Homes for sale in Canada | Check out
               plans, pricing, availability for pre construction homes through
               Globalhomes
-            </p>
+            </h2>
           </div>
           <div className="py-4"></div>
           <div className="row row-cols-1 row-cols-md-4 gy-4">

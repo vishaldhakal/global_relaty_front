@@ -1185,3 +1185,7 @@ label {
   box-shadow: 0 0.2rem 0.3rem rgb(130 133 133 / 18%) !important;
   color: black;
 }
+.fs-small{
+  font-size: 1rem;
+
+}

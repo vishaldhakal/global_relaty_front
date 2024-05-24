@@ -1,6 +1,7 @@
 import CondoCard from "@/components/CondoCard";
 import BottomContactForm from "@/components/BottomContactForm";
 import { notFound } from "next/navigation";
+import TopScroll from "@/components/TopScroll";
 
 async function getData(city) {
   const res = await fetch(
@@ -14,6 +15,17 @@ async function getData(city) {
     notFound();
   }
 
+  return res.json();
+}
+
+async function getCities() {
+  const res = await fetch("https://api.globalhomes.ca/api/all-city", {
+    next: { revalidate: 10 },
+  });
+
+  if (!res.ok) {
+    throw new Error("Failed to fetch data");
+  }
   return res.json();
 }
 
@@ -41,9 +53,11 @@ export async function generateMetadata({ params }, parent) {
 
 export default async function Home({ params }) {
   const data = await getData(params.city);
+  const cities = await getCities();
 
   return (
     <>
+      <TopScroll cities={cities}></TopScroll>
       <div className="pt-5">
         <div className="container">
           <div className="d-flex flex-column">
