@@ -15,11 +15,6 @@ export const metadata = {
   title: "Pre Construction Condo Developments for Sale in Canada",
   description:
     "Find the latest Pre Construction condo developments for sale in Canada with the Canada's most user-friendly pre construction portal. Search new homes to buy from leading estate marketplace in Canada.",
-  icons: {
-    icon: "/icon.png",
-    shortcut: "/shortcut-icon.png",
-    apple: "/apple-icon.png",
-  },
   viewport: {
     width: "device-width",
     initialScale: 1,
