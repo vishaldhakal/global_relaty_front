@@ -67,10 +67,18 @@ const Navbar = ({ cities }) => {
                   ))}
               </div>
             </li> */}
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <a className="nav-link" href="#">
                 About
               </a>
+            </li> */}
+            <li className="nav-item">
+              <Link
+                className="nav-link"
+                href={"/pre-construction-homes-canada"}
+              >
+                Canada's Projects
+              </Link>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#">
