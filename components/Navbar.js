@@ -77,7 +77,7 @@ const Navbar = ({ cities }) => {
                 className="nav-link"
                 href={"/pre-construction-homes-canada"}
               >
-                Canada's Projects
+                Upcoming Projects
               </Link>
             </li>
             <li className="nav-item">
