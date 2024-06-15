@@ -2,6 +2,7 @@ import CondoCard from "@/components/CondoCard";
 import BottomContactForm from "@/components/BottomContactForm";
 import { notFound } from "next/navigation";
 import TopScroll from "@/components/TopScroll";
+import AddBanner from "@/components/AddBanner";
 
 async function getData(city) {
   const res = await fetch(
@@ -58,6 +59,7 @@ export default async function Home({ params }) {
   return (
     <>
       <TopScroll cities={cities}></TopScroll>
+
       <div className="pt-5">
         <div className="container">
           <div className="d-flex flex-column">
@@ -71,6 +73,7 @@ export default async function Home({ params }) {
               {CapitalizeFirst(params.city)}
             </p>
           </div>
+          <AddBanner city={params.city}></AddBanner>
           <div className="py-2"></div>
           <div className="row row-cols-1 row-cols-md-4 gy-4">
             {data.preconstructions &&

@@ -35,10 +35,10 @@ export default async function Home(props) {
     <>
       <img src="/bannertop.png" alt="dce" className="img-fluid" />
       <TopScroll cities={cities}></TopScroll>
-      <div className="pt-5 mt-5">
+      <div className="pt-md-5 mt-md-5 mt-2">
         <div className="container pt-md-5">
           <div className="d-flex flex-column justify-content-center align-items-center">
-            <h1 className="main-title">
+            <h1 className="main-title text-center">
               Pre Construction Homes in Canada (2024)
             </h1>
             <h2 className="text-mine fs-small text-center ">
@@ -62,7 +62,7 @@ export default async function Home(props) {
             Explore New Construction Homes in These Cities
           </h2>
           <div className="row">
-            <div className="col-4 col-md-4 col-xl-4">
+            <div className="col-6 col-md-4 col-xl-4">
               <Link className="d-block properti_city" href={"/toronto"}>
                 <div className="thumb">
                   <img
@@ -79,7 +79,7 @@ export default async function Home(props) {
                 </div>
               </Link>
             </div>
-            <div className="col-4 col-lg-8 col-xl-8">
+            <div className="col-6 col-lg-8 col-xl-8">
               <Link className="d-block properti_city" href={"/brampton"}>
                 <div className="thumb">
                   <img
@@ -96,7 +96,7 @@ export default async function Home(props) {
                 </div>
               </Link>
             </div>
-            <div className="col-4 col-lg-8 col-xl-8">
+            <div className="col-6 col-lg-8 col-xl-8">
               <Link className="d-block properti_city" href={"/etobicoke"}>
                 <div className="thumb">
                   <img
@@ -113,7 +113,7 @@ export default async function Home(props) {
                 </div>
               </Link>
             </div>
-            <div className="col-4 col-md-4 col-xl-4">
+            <div className="col-6 col-md-4 col-xl-4">
               <Link className="d-block properti_city" href={"/mississauga"}>
                 <div className="thumb">
                   <img
@@ -131,7 +131,7 @@ export default async function Home(props) {
               </Link>
             </div>
           </div>
-          <div className="pt-5 mt-5"></div>
+          <div className="pt-md-5 mt-5"></div>
           <div className="py-5 my-5" id="mycontact">
             <div className="container">
               <div className="row justify-content-center">

@@ -1130,6 +1130,10 @@ label {
   .w-mine5 {
     width: 180px;
 } 
+.logo img {
+  max-height: 20px;
+  margin-right: 6px;
+}
 }
 .bg-mine {
   background-color: rgb(245, 246, 247);
