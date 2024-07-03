@@ -114,7 +114,7 @@ export default function BottomContactForm(props) {
       <input
         type="submit"
         value={submitbtn}
-        className="btn btn-call btn-lg w-100 mb-2"
+        className="btn bg-dark text-white btn-lg w-100 mb-2"
         id="subbtn"
       />
     </form>

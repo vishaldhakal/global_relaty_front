@@ -281,23 +281,23 @@ a:hover {
   font-weight: 600;
 }
 
-/* Borde#004AAD Tabs */
-.nav-tabs-borde#004AAD {
+/* Borde#2a88ff Tabs */
+.nav-tabs-borde#2a88ff {
   border-bottom: 2px solid #ebeef4;
 }
 
-.nav-tabs-borde#004AAD .nav-link {
+.nav-tabs-borde#2a88ff .nav-link {
   margin-bottom: -2px;
   border: none;
   color: #2c384e;
 }
 
-.nav-tabs-borde#004AAD .nav-link:hover,
-.nav-tabs-borde#004AAD .nav-link:focus {
+.nav-tabs-borde#2a88ff .nav-link:hover,
+.nav-tabs-borde#2a88ff .nav-link:focus {
   color: #4154f1;
 }
 
-.nav-tabs-borde#004AAD .nav-link.active {
+.nav-tabs-borde#2a88ff .nav-link.active {
   background-color: #fff;
   color: #4154f1;
   border-bottom: 2px solid #4154f1;
@@ -317,7 +317,7 @@ a:hover {
 } */
 
 .logo img {
-  max-height: 46px;
+  max-height: 66px;
   margin-right: 6px;
 }
 
@@ -327,12 +327,12 @@ a:hover {
   color: #012970;
 }
 .btn-danger{
-  background-color: #004AAD !important;
-  border-color:#004AAD !important ;
+  background-color: #2a88ff !important;
+  border-color:#2a88ff !important ;
 }
 .btn-danger:hover, .btn-danger:focus, .btn-danger:active {
-  background-color: #004AAD !important;
-  border-color:#004AAD !important ;
+  background-color: #2a88ff !important;
+  border-color:#2a88ff !important ;
 }
 .header {
   transition: all 0.5s;
@@ -808,7 +808,7 @@ label {
   margin-bottom: 10px;
 }
 /* .main-title:before {
-  background-color: #004AAD;
+  background-color: #2a88ff;
   width: 10px;
   height: 33px;
   margin-right: 0.2em;
@@ -819,7 +819,8 @@ label {
   font-weight: 500;
 }
 .text-mine2{
-  color: #6D8E3C;
+  color: #ffd042;
+  text-shadow: 1px 1px 1px #000000;
   font-weight: 500;
 }
 
@@ -840,7 +841,7 @@ label {
 .cardd-subtitle{
   font-size: 1rem;
   font-weight: 600;
-  color: #004AAD;
+  color: #2a88ff;
 }
 
 .card-address{
@@ -850,9 +851,9 @@ label {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: #6D8E3C;
+  background-color: #ffd042;
   border-top-left-radius: 10px;
-  color: white;
+  color: rgb(0, 0, 0);
   font-size: 0.85rem;
 }
 .abs2{
@@ -989,7 +990,7 @@ label {
   justify-content: center;
 }
 .accent-line:before {
-  background-color: #004AAD;
+  background-color: #2a88ff;
   height: 2px;
   width: 2em;
   margin-right: 0.75em;
@@ -998,7 +999,7 @@ label {
 .accent-line:after {
   width: 2em;
   height: 2px;
-  background-color: #004AAD;
+  background-color: #2a88ff;
   margin-left: 0.75em;
   content: "";
 }
