@@ -48,15 +48,15 @@ const SearchWithAutocomplete = () => {
       )
       .slice(0, 3);
 
-    const filteredProjects = data.projects
+    /* const filteredProjects = data.projects
       .filter(
         (project) =>
           project.project_name.toLowerCase().includes(term.toLowerCase()) ||
           project.slug.toLowerCase().includes(term.toLowerCase())
       )
-      .slice(0, 3);
+      .slice(0, 3); */
 
-    setSearchResults({ cities: filteredCities, projects: filteredProjects });
+    setSearchResults({ cities: filteredCities, projects: [] });
   };
 
   const handleOptionSelect = (option) => {
@@ -82,7 +82,7 @@ const SearchWithAutocomplete = () => {
           type="text"
           className="form-control py-2 w-mine5"
           id="searchInput"
-          placeholder="Search for a city or project"
+          placeholder="Search for a city"
           autoComplete="off"
           value={searchTerm}
           onChange={handleSearch}
