@@ -77,6 +77,13 @@ export default async function Home({ params }) {
           <div className="pt-5 mt-5"></div>
           <div className="py-5 my-5" id="mycontact">
             <div className="container">
+              <div className="d-flex justify-content-center">
+                <img
+                  src="/rakesh-sharma.png"
+                  alt="global homes logo"
+                  className="img-fluid w-m text-center mb-3"
+                />
+              </div>
               <div className="row justify-content-center">
                 <h3 class="fw-bolder fw-boldie text-center fs-1">
                   VIP PLATIUM ACCESS

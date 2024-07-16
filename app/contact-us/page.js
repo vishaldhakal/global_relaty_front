@@ -6,6 +6,13 @@ export default async function Home(props) {
       <div className="pt-5 mt-5">
         <div id="mycontact">
           <div className="container">
+            <div className="d-flex justify-content-center">
+              <img
+                src="/rakesh-sharma.png"
+                alt="global homes logo"
+                className="img-fluid w-m text-center mb-3"
+              />
+            </div>
             <div className="row justify-content-center">
               <h1 class="fw-bolder fw-boldie text-center">
                 VIP PLATIUM ACCESS

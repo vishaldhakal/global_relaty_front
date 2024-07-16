@@ -92,10 +92,11 @@ a:hover {
 }
 .agent-img {
   width: 100% !important;
-  max-height: 80px !important;
+  max-height: 100px !important;
   border-radius: 10%;
   object-fit: cover;
   object-position: top;
+  background-color: rgb(239, 239, 239);
 }
 
 @media (min-width: 768px) {
@@ -1193,4 +1194,10 @@ label {
 .fs-small{
   font-size: 1rem;
 
+}
+.heim i::before{
+  font-size: 2rem !important;
+}
+.w-m{
+  width: 200px;
 }

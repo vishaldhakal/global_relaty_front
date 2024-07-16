@@ -2,6 +2,7 @@ import CondoCardHome from "@/components/CondoCardHome";
 import Link from "next/link";
 import BottomContactForm from "@/components/BottomContactForm";
 import TopScroll from "@/components/TopScroll";
+import Builders from "@/components/Builders";
 
 async function getData() {
   const res = await fetch(
@@ -33,8 +34,9 @@ export default async function Home(props) {
   const cities = await getCities();
   return (
     <>
-      <img src="/bannertop.png" alt="dce" className="img-fluid" />
+      {/* <img src="/bannertop.png" alt="dce" className="img-fluid" /> */}
       <TopScroll cities={cities}></TopScroll>
+      <Builders></Builders>
       <div className="pt-md-5 mt-md-5 mt-2">
         <div className="container pt-md-5">
           <div className="d-flex flex-column justify-content-center align-items-center">
@@ -134,6 +136,13 @@ export default async function Home(props) {
           <div className="pt-md-5 mt-5"></div>
           <div className="py-5 my-5" id="mycontact">
             <div className="container">
+              <div className="d-flex justify-content-center">
+                <img
+                  src="/rakesh-sharma.png"
+                  alt="global homes logo"
+                  className="img-fluid w-m text-center mb-3"
+                />
+              </div>
               <div className="row justify-content-center">
                 <h3 class="fw-bolder fw-boldie text-center fs-1">
                   VIP PLATIUM ACCESS

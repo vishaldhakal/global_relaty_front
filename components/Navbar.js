@@ -10,7 +10,7 @@ const Navbar = ({ cities }) => {
     return <></>;
   }
   return (
-    <nav className="navbar navbar-expand-sm navbar-dark bg-white">
+    <nav className="navbar navbar-expand-sm navbar-dark bg-white sticky-top">
       <div className="container justify-content-between justify-content-md-start">
         <Link href="/" className="logo d-flex align-items-center">
           <img src="/logo.png" alt="global homes logo" className="img-fluid" />

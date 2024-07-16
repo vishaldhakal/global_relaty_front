@@ -262,8 +262,8 @@ export default async function Home({ params }) {
                     <div className="row row-cols-2 align-items-start">
                       <div className="col-4">
                         <img
-                          src="/aaa.webp"
-                          alt="contact image"
+                          src="/rakesh-sharma.png"
+                          alt="global homes logo"
                           className="agent-img"
                         />
                       </div>
@@ -294,6 +294,13 @@ export default async function Home({ params }) {
           <div className="pt-5 mt-5"></div>
           <div className="py-5 my-5" id="mycontact">
             <div className="container">
+              <div className="d-flex justify-content-center">
+                <img
+                  src="/rakesh-sharma.png"
+                  alt="global homes logo"
+                  className="img-fluid w-m text-center mb-3"
+                />
+              </div>
               <div className="row justify-content-center">
                 <h3 class="fw-bolder fw-boldie text-center fs-1">
                   VIP PLATIUM ACCESS
@@ -302,7 +309,7 @@ export default async function Home({ params }) {
               <h2 className="fw-bolder fw-boldie text-center px-md-4 fs-3">
                 Contact Globalhomes now!
               </h2>
-              <div className="row row-cols-1 row-cols-md-3 mt-5">
+              <div className="row row-cols-1 row-cols-md-3 mt-4">
                 <div className="col-md-3"></div>
                 <div className="col-md-6">
                   <BottomContactForm
@@ -319,7 +326,7 @@ export default async function Home({ params }) {
           <div>
             <div className="d-flex flex-column">
               <h2 className="main-title">
-                Similar New Construction homes in {data.city.name} ( 2023 )
+                Similar New Construction homes in {data.city.name} ( 2024 )
               </h2>
             </div>
             <div className="py-2"></div>
