@@ -90,6 +90,11 @@ const Navbar = ({ cities }) => {
                 Contact
               </Link>
             </li>
+            <li className="nav-item">
+              <Link className="nav-link" href="/blogs">
+                Blogs
+              </Link>
+            </li>
           </ul>
           <Link
             href="tel:(905) 872 5680"
@@ -98,11 +103,11 @@ const Navbar = ({ cities }) => {
             Call Now
           </Link>
 
-          <img
+          {/* <img
             src="/linktreescan.png"
             alt="linktree scan"
             className="img-fluid smallimg ms-3"
-          />
+          /> */}
         </div>
       </div>
     </nav>
