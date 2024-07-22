@@ -97,6 +97,12 @@ const Navbar = ({ cities }) => {
           >
             Call Now
           </Link>
+
+          <img
+            src="/linktreescan.png"
+            alt="linktree scan"
+            className="img-fluid smallimg ms-3"
+          />
         </div>
       </div>
     </nav>

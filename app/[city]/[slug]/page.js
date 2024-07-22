@@ -5,6 +5,8 @@ import SideContactForm from "@/components/SideContactForm";
 import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
 import { notFound } from "next/navigation";
+import SocialMediaShare from "@/components/SocialMediaShare";
+
 async function getData(slug) {
   const res = await fetch(
     "https://api.globalhomes.ca/api/preconstructions-detail/" + slug,
@@ -154,6 +156,7 @@ export default async function Home({ params }) {
               <div className="col col-md-6">
                 <div className="screenshot">
                   <div className="row row-cols-1 row-cols-sm-2">
+                    <SocialMediaShare></SocialMediaShare>
                     <div className="col-sm-12">
                       <h1 className="side fw-bold text-mine2">
                         {data.project_name}

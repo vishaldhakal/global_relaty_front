@@ -30,17 +30,33 @@ const Footer = ({ cities }) => {
 
             <h4>Connect with us</h4>
             <div className="social-links text-dark d-flex gap-4 mt-2">
-              <Link href="#" className="me-2 heim text-dark">
+              <Link
+                href="https://x.com/RakeshRealty"
+                target="_blank"
+                className="me-2 heim text-dark"
+              >
                 <i className="bi bi-twitter"></i>
               </Link>
-              <Link href="#" className="me-2 heim text-dark">
-                <i className="bi bi-facebook "></i>
+              <Link
+                href="https://www.tiktok.com/@savemaxglobalrealty?is_from_webapp=1&sender_device=pc"
+                target="_blank"
+                className="me-2 heim text-dark"
+              >
+                <i className="bi bi-tiktok "></i>
               </Link>
-              <Link href="#" className="me-2 heim text-dark">
+              <Link
+                href="https://www.instagram.com/savemaxglobalrealty/"
+                target="_blank"
+                className="me-2 heim text-dark"
+              >
                 <i className="bi bi-instagram"></i>
               </Link>
-              <Link href="#" className="me-2 heim text-dark">
-                <i className="bi bi-linkedin"></i>
+              <Link
+                href="https://www.youtube.com/@SaveMaxGobalRealty"
+                target="_blank"
+                className="me-2 heim text-dark"
+              >
+                <i className="bi bi-youtube"></i>
               </Link>
             </div>
             <div className="mt-3">
