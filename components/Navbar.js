@@ -81,9 +81,9 @@ const Navbar = ({ cities }) => {
               </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
-                Dubai and India Projects
-              </a>
+              <Link className="nav-link" href="/india">
+                India Projects
+              </Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link" href="/contact-us">

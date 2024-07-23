@@ -4,9 +4,9 @@ import { notFound } from "next/navigation";
 import TopScroll from "@/components/TopScroll";
 import AddBanner from "@/components/AddBanner";
 
-async function getData(city) {
+async function getData() {
   const res = await fetch(
-    "https://api.globalhomes.ca/api/preconstructions-city/" + city,
+    "https://api.globalhomes.ca/api/preconstructions-city/india",
     {
       next: { revalidate: 10 },
     }
@@ -19,62 +19,36 @@ async function getData(city) {
   return res.json();
 }
 
-async function getCities() {
-  const res = await fetch("https://api.globalhomes.ca/api/all-city", {
-    next: { revalidate: 10 },
-  });
-
-  if (!res.ok) {
-    throw new Error("Failed to fetch data");
-  }
-  return res.json();
-}
-
-const CapitalizeFirst = (city) => {
-  return city.charAt(0).toUpperCase() + city.slice(1);
-};
-
 export async function generateMetadata({ params }, parent) {
-  let city = CapitalizeFirst(params.city);
-  const data = await getData(params.city);
+  const data = await getData();
   return {
     ...parent,
     alternates: {
-      canonical: `https://globalhomes.ca/${params.city}`,
+      canonical: `https://globalhomes.ca/india`,
     },
-    title: data.preconstructions.length + " Preconstruction Homes in " + city,
-    description: "Preconstruction Homes in " + city,
+    title:
+      data.preconstructions.length + " Preconstruction Homes in " + "India",
+    description: "Preconstruction Homes in " + "India",
     description:
-      "Search our selection of pre construction homes for sale in " +
-      city +
-      ". Our ever-changing portfolio of pre constructions brings you closer to your ideal homes in the growing city of " +
-      city,
+      "Search our selection of pre construction homes for sale in India" +
+      ". Our ever-changing portfolio of pre constructions brings you closer to your ideal homes in the growing city of India",
   };
 }
 
 export default async function Home({ params }) {
-  const data = await getData(params.city);
-  const cities = await getCities();
+  const data = await getData();
 
   return (
     <>
-      <TopScroll cities={cities}></TopScroll>
-
       <div className="pt-5">
         <div className="container">
           <div className="d-flex flex-column">
-            <h1 className="main-title">
-              New Construction homes in {CapitalizeFirst(params.city)}
-            </h1>
+            <h1 className="main-title">New Build homes in India</h1>
             <p className="text-mine">
-              {data.preconstructions.length} New Preconstruction Homes for sale
-              in {CapitalizeFirst(params.city)}, Ontario | Check out plans,
-              pricing, availability for pre construction homes in{" "}
-              {CapitalizeFirst(params.city)}
+              {data.preconstructions.length} New Build Homes for sale in India |
+              Check out plans, pricing, availability
             </p>
           </div>
-          <AddBanner city={params.city}></AddBanner>
-          <div className="py-2"></div>
           <div className="row row-cols-1 row-cols-md-4 gy-4">
             {data.preconstructions &&
               data.preconstructions.map((item) => (
@@ -107,7 +81,7 @@ export default async function Home({ params }) {
                 <div className="col-md-6">
                   <BottomContactForm
                     proj_name="All"
-                    city={CapitalizeFirst(params.city)}
+                    city={"India"}
                   ></BottomContactForm>
                 </div>
                 <div className="col-md-3"></div>

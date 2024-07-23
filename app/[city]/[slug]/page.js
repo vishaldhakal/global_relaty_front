@@ -42,7 +42,7 @@ export async function generateMetadata({ params }, parent) {
   return {
     ...parent,
     alternates: {
-      canonical: `https://condomonk.ca/${params.city}/${params.slug}`,
+      canonical: `https://globalhomes.ca/${params.city}/${params.slug}`,
     },
     title:
       data.project_name + " in " + data.city.name + "by " + data.developer.name,
@@ -70,7 +70,7 @@ export default async function Home({ params }) {
     for (let i = images.length; i < 7; i++) {
       neImgs.push({
         id: 0,
-        image: "https://condomonk.ca/noimage.webp",
+        image: "https://globalhomes.ca/noimage.webp",
       });
     }
     return neImgs;

@@ -10,7 +10,7 @@ const montserrat = Jost({ subsets: ["latin"] });
 
 export const metadata = {
   alternates: {
-    canonical: `https://condomonk.ca/`,
+    canonical: `https://globalhomes.ca/`,
   },
   title: "Pre Construction Condo Developments for Sale in Canada",
   description:
