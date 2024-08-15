@@ -42,10 +42,10 @@ export async function generateMetadata({ params }, parent) {
     alternates: {
       canonical: `https://globalhomes.ca/${params.city}`,
     },
-    title: data.preconstructions.length + " Preconstruction Homes in " + city,
+    title: data.preconstructions.length + " New Developments in " + city,
     description: "Preconstruction Homes in " + city,
     description:
-      "Search our selection of pre construction homes for sale in " +
+      "Search our selection of New Development Homes for sale in " +
       city +
       ". Our ever-changing portfolio of pre constructions brings you closer to your ideal homes in the growing city of " +
       city,
@@ -64,7 +64,8 @@ export default async function Home({ params }) {
         <div className="container">
           <div className="d-flex flex-column">
             <h1 className="main-title">
-              New Construction homes in {CapitalizeFirst(params.city)}
+              New Developments for sale in {CapitalizeFirst(params.city)}
+              ,Ontario
             </h1>
             <p className="text-mine">
               {data.preconstructions.length} New Preconstruction Homes for sale
