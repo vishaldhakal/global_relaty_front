@@ -44,6 +44,7 @@ export default async function Home(props) {
   const data = await getData();
   const cities = await getCities();
   const builders = await getBuilders();
+
   return (
     <>
       {/* <img src="/bannertop.png" alt="dce" className="img-fluid" /> */}

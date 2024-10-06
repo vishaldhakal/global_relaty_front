@@ -1218,3 +1218,11 @@ label {
   border-bottom-left-radius: 0 !important;
   border-bottom-right-radius: 0 !important;
 }
+
+@media (max-width: 767px) {
+  .condocard-img-top2 {
+    padding: 0;
+    height: 38px!important;
+  }
+}
+
