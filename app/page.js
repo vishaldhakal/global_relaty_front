@@ -29,14 +29,26 @@ async function getCities() {
   return res.json();
 }
 
+async function getBuilders() {
+  const res = await fetch("https://api.globalhomes.ca/api/developers", {
+    next: { revalidate: 10 },
+  });
+
+  if (!res.ok) {
+    throw new Error("Failed to fetch data");
+  }
+  return res.json();
+}
+
 export default async function Home(props) {
   const data = await getData();
   const cities = await getCities();
+  const builders = await getBuilders();
   return (
     <>
       {/* <img src="/bannertop.png" alt="dce" className="img-fluid" /> */}
       <TopScroll cities={cities}></TopScroll>
-      <Builders></Builders>
+      <Builders builders={builders}></Builders>
       <div className="pt-md-5 mt-md-5 mt-2">
         <div className="container pt-md-5">
           <div className="d-flex flex-column justify-content-center align-items-center">

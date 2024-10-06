@@ -86,6 +86,11 @@ const Navbar = ({ cities }) => {
               </Link>
             </li>
             <li className="nav-item">
+              <Link className="nav-link" href="/builders">
+                Top Builders
+              </Link>
+            </li>
+            <li className="nav-item">
               <Link className="nav-link" href="/contact-us">
                 Contact
               </Link>
