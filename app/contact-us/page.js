@@ -14,7 +14,7 @@ export default async function Home(props) {
               />
             </div>
             <div className="row justify-content-center">
-              <h1 class="fw-bolder fw-boldie text-center">
+              <h1 className="fw-bolder fw-boldie text-center">
                 VIP PLATIUM ACCESS
               </h1>
             </div>

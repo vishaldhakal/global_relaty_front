@@ -69,7 +69,7 @@ export default async function Home({ params }) {
                 />
               </div>
               <div className="row justify-content-center">
-                <h3 class="fw-bolder fw-boldie text-center fs-1">
+                <h3 className="fw-bolder fw-boldie text-center fs-1">
                   VIP PLATIUM ACCESS
                 </h3>
               </div>

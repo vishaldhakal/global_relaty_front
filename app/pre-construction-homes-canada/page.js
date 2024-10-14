@@ -15,7 +15,8 @@ async function getData() {
     notFound();
   }
 
-  return res.json();
+  const data = await res.json();
+  return data;
 }
 
 async function getCities() {
@@ -26,7 +27,8 @@ async function getCities() {
   if (!res.ok) {
     throw new Error("Failed to fetch data");
   }
-  return res.json();
+  const data = await res.json();
+  return data;
 }
 
 export async function generateMetadata(parent) {
@@ -85,7 +87,7 @@ export default async function Home({ params }) {
                 />
               </div>
               <div className="row justify-content-center">
-                <h3 class="fw-bolder fw-boldie text-center fs-1">
+                <h3 className="fw-bolder fw-boldie text-center fs-1">
                   VIP PLATIUM ACCESS
                 </h3>
               </div>
