@@ -112,11 +112,11 @@ export default function Upload() {
     axios
       .get("https://api.globalhomes.ca/api/developers/")
       .then((res) => {
-        console.log(res.data.results);
-        setDevelopers(res.data.results);
+        console.log(res.data);
+        setDevelopers(res.data);
         setPredata((prevState) => ({
           ...prevState,
-          developer: res.data.results[0],
+          developer: res.data[0],
         }));
       })
       .catch((err) => {
