@@ -3,7 +3,7 @@ import BottomContactForm from "@/components/BottomContactForm";
 import { notFound } from "next/navigation";
 
 async function getData() {
-  const res = await fetch("https://api.globalhomes.ca/api/developers/", {
+  const res = await fetch("https://api.globalhomes.ca/api/developers-filter/", {
     next: { revalidate: 10 },
   });
 

@@ -124,8 +124,8 @@ export default function Update({ params }) {
     axios
       .get("https://api.globalhomes.ca/api/developers/")
       .then((res) => {
-        console.log(res.data);
-        setDevelopers(res.data);
+        console.log(res.data.results);
+        setDevelopers(res.data.results);
       })
       .catch((err) => {
         console.log(err.data);
@@ -603,16 +603,14 @@ export default function Update({ params }) {
                       id="developer"
                       value={predata.developer.name}
                       onChange={(e) => handleChangeDev(e)}
-                      aria-label="Floating label select example"
+                      ariaLabel="Floating label select example"
                     >
-                      <option value={predata.developer.name} selected>
-                        {predata.developer.name}
-                      </option>
-                      {developers.map((dev) => (
-                        <option key={dev.id} value={dev.name}>
-                          {dev.name}
-                        </option>
-                      ))}
+                      {developers &&
+                        developers.map((developer) => (
+                          <option key={developer.id} value={developer.name}>
+                            {developer.name}
+                          </option>
+                        ))}
                     </select>
                     <label htmlFor="developer">
                       Developer <span className="text-danger">*</span>

@@ -47,6 +47,7 @@ export default function Upload() {
   const [uploadimages, setUploadImages] = useState([]);
   const [developerdata, setDeveloperData] = useState(developer_stat);
   const [modaldeveloper, setModalDeveloper] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const handleCreateDeveloper = (e) => {
     e.preventDefault();
@@ -112,11 +113,11 @@ export default function Upload() {
     axios
       .get("https://api.globalhomes.ca/api/developers/")
       .then((res) => {
-        console.log(res.data);
-        setDevelopers(res.data);
+        console.log(res.data.results);
+        setDevelopers(res.data.results);
         setPredata((prevState) => ({
           ...prevState,
-          developer: res.data[0],
+          developer: res.data.results[0],
         }));
       })
       .catch((err) => {
@@ -173,6 +174,7 @@ export default function Upload() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setLoading(true);
     console.log(predata);
     console.log(uploadimages);
     console.log(uploadplans);
@@ -685,12 +687,19 @@ export default function Upload() {
           <div className="mt-5"></div>
           <div className="pt-5"></div>
           <div className="py-3 d-flex justify-content-center align-items-center d-block bg-white w-100 posss">
-            <button
-              className="btn btn-success btn-lg shadow-lg"
-              onClick={(e) => handleSubmit(e)}
-            >
-              Upload now
-            </button>
+            {loading && (
+              <div className="spinner-border text-success" role="status">
+                <span className="visually-hidden">Loading...</span>
+              </div>
+            )}
+            {!loading && (
+              <button
+                className="btn btn-success btn-lg shadow-lg"
+                onClick={(e) => handleSubmit(e)}
+              >
+                Upload now
+              </button>
+            )}
           </div>
         </div>
       </div>

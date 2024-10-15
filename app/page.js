@@ -30,7 +30,7 @@ async function getCities() {
 }
 
 async function getBuilders() {
-  const res = await fetch("https://api.globalhomes.ca/api/developers", {
+  const res = await fetch("https://api.globalhomes.ca/api/developers-filter", {
     next: { revalidate: 10 },
   });
 
