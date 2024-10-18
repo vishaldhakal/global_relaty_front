@@ -192,6 +192,7 @@ export default function Upload() {
       predata.no_of_units === ""
     ) {
       swal("Please fill all the fields", "", "error");
+      setLoading(false);
       return;
     }
 
@@ -216,6 +217,7 @@ export default function Upload() {
       })
       .catch((err) => {
         console.log(err.data);
+        setLoading(false);
         swal("Something went wrong", "", "error");
       });
   };
