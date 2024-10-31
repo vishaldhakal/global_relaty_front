@@ -185,6 +185,7 @@ export default function Upload() {
       predata.price_starting_from === "" ||
       predata.price_to === "" ||
       predata.project_type === "" ||
+      predata.description === "" ||
       predata.status === "" ||
       predata.city.name === "" ||
       predata.developer.name === "" ||
