@@ -4,6 +4,7 @@ import Link from "next/link";
 import dynamic from "next/dynamic";
 import swal from "sweetalert";
 import axios from "axios";
+import SearchableDeveloperSelect from "@/components/SearchableDeveloperSelect";
 import { useRouter } from "next/navigation";
 
 const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
@@ -217,7 +218,7 @@ export default function Upload() {
         routee.push("/admin/");
       })
       .catch((err) => {
-        console.log(err.data);
+        /* console.log(err.data); */
         setLoading(false);
         swal("Something went wrong", "", "error");
       });
@@ -529,7 +530,7 @@ export default function Upload() {
                     </button>
                   </div> */}
                 </div>
-                <div className="col-4">
+                {/* <div className="col-4">
                   <div className="form-floating w-100">
                     <input
                       list="devs"
@@ -550,6 +551,24 @@ export default function Upload() {
                       Developer <span className="text-danger">*</span>
                     </label>
                   </div>
+                  <div className="col-12">
+                    <button
+                      className="btn btn-outline-dark mt-2 w-100"
+                      onClick={() => setModalDeveloper(true)}
+                    >
+                      Add New Developer
+                    </button>
+                  </div>
+                </div> */}
+                <div className="col-4">
+                  <SearchableDeveloperSelect
+                    developers={developers}
+                    selectedDeveloper={predata.developer}
+                    onSelect={(dev) =>
+                      setPredata((prev) => ({ ...prev, developer: dev }))
+                    }
+                    onAddNew={() => setModalDeveloper(true)}
+                  />
                   <div className="col-12">
                     <button
                       className="btn btn-outline-dark mt-2 w-100"

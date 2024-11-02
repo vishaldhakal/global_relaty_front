@@ -5,6 +5,7 @@ import dynamic from "next/dynamic";
 import swal from "sweetalert";
 import axios from "axios";
 import { useRouter } from "next/navigation";
+import SearchableDeveloperSelect from "@/components/SearchableDeveloperSelect";
 
 const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
 
@@ -597,25 +598,14 @@ export default function Update({ params }) {
                   </div> */}
                 </div>
                 <div className="col-4">
-                  <div className="form-floating w-100">
-                    <select
-                      className="form-select"
-                      id="developer"
-                      value={predata.developer.name}
-                      onChange={(e) => handleChangeDev(e)}
-                      ariaLabel="Floating label select example"
-                    >
-                      {developers &&
-                        developers.map((developer) => (
-                          <option key={developer.id} value={developer.name}>
-                            {developer.name}
-                          </option>
-                        ))}
-                    </select>
-                    <label htmlFor="developer">
-                      Developer <span className="text-danger">*</span>
-                    </label>
-                  </div>
+                  <SearchableDeveloperSelect
+                    developers={developers}
+                    selectedDeveloper={predata.developer}
+                    onSelect={(dev) =>
+                      setPredata((prev) => ({ ...prev, developer: dev }))
+                    }
+                    onAddNew={() => setModalDeveloper(true)}
+                  />
                   <div className="col-12">
                     <button
                       className="btn btn-outline-dark mt-2 w-100"
