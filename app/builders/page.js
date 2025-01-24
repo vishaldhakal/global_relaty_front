@@ -82,23 +82,28 @@ export default async function Builders() {
           <div className="pt-5 mt-5"></div>
           <div className="pt-5 mt-5"></div>
           <div className="py-5 my-5" id="mycontact">
-            <div className="container-fluid">
-              <div className="row justify-content-center">
+            <div className="container">
+              <div className="d-flex justify-content-center">
                 <img
-                  src="/contact-bottom-2.png"
-                  alt="dce"
-                  className="img-fluid w-25 w-smm-50 mb-3"
+                  src="/rakesh-sharma.png"
+                  alt="global homes logo"
+                  className="img-fluid w-m text-center mb-3"
                 />
               </div>
-              <h2 className="fw-mine text-center px-md-4 fs-4">
-                Contact Dolphy Team Today
+              <div className="row justify-content-center">
+                <h3 className="fw-bolder fw-boldie text-center fs-1">
+                  VIP PLATIUM ACCESS
+                </h3>
+              </div>
+              <h2 className="fw-bolder fw-boldie text-center px-md-4 fs-3">
+                Contact Globalhomes now!
               </h2>
-              <div className="row row-cols-1 row-cols-md-3 mt-3">
+              <div className="row row-cols-1 row-cols-md-3 mt-5">
                 <div className="col-md-3"></div>
                 <div className="col-md-6">
                   <BottomContactForm
                     proj_name="All"
-                    city="Builders Page"
+                    city="Home Page"
                   ></BottomContactForm>
                 </div>
                 <div className="col-md-3"></div>
